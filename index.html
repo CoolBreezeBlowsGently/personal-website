@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breeze — 全栈开发者</title>
+<meta name="description" content="Breeze（CoolBreezeBlowsGently）的个人主页：做 Web 应用、管理后台与多端界面，把复杂的事情做得轻一点。">
+<meta name="theme-color" content="#052B2C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Breeze — 全栈开发者">
+<meta property="og:description" content="做 Web 应用、管理后台与多端界面，把复杂的事情做得轻一点。">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="topbar">
+  <a class="mark" href="#top" aria-label="Breeze，回到顶部">Breeze<span aria-hidden="true">.</span></a>
+  <nav class="nav" aria-label="主导航">
+    <a href="#work">项目</a>
+    <a href="#about">关于</a>
+    <a href="#contact">联系</a>
+    <a class="nav__ext" href="https://github.com/CoolBreezeBlowsGently" target="_blank" rel="noopener">GitHub<span aria-hidden="true"> ↗</span></a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <canvas class="hero__wind" aria-hidden="true"></canvas>
+    <div class="hero__inner">
+      <p class="hero__kicker">个人主页 <span aria-hidden="true">/</span> 2026</p>
+      <h1 class="hero__title">
+        把复杂的事情<br>
+        做得<span class="hero__swoosh">轻</span>一点。
+      </h1>
+      <p class="hero__lede">
+        我是 Breeze，全栈开发者。<br>
+        做 <span class="nb">Web 应用</span>、管理后台与多端界面，<br>
+        关心一件事：让人少绕路。
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="#work">看项目</a>
+        <a class="btn btn--ghost" href="#contact">聊聊</a>
+      </div>
+      <dl class="hero__facts">
+        <div>
+          <dt>现在在做</dt>
+          <dd>医院管理系统的重构</dd>
+        </div>
+        <div>
+          <dt>常用技术</dt>
+          <dd>PHP · JavaScript · uni-app</dd>
+        </div>
+        <div>
+          <dt>站点托管</dt>
+          <dd>Cloudflare Pages</dd>
+        </div>
+      </dl>
+    </div>
+    <p class="hero__cue" aria-hidden="true">向下</p>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-h">
+    <div class="section__head reveal">
+      <h2 id="work-h">项目</h2>
+      <p class="section__note">按时间倒序。仓库多为私有，需要看代码可以联系我。</p>
+    </div>
+
+    <ol class="work">
+      <li class="work__row reveal">
+        <p class="work__index" aria-hidden="true">01</p>
+        <div class="work__body">
+          <h3><span class="work__title">医院管理系统</span> <span class="work__badge">私有</span></h3>
+          <p>
+            门诊与住院业务的管理后台：排班、收费、病历与统计报表，
+            配一套移动端。需求文档先落地，再按模块推进。
+          </p>
+          <ul class="tags" aria-label="技术栈">
+            <li>ThinkPHP</li><li>FastAdmin</li><li>Bootstrap</li><li>uni-app</li><li>MySQL</li>
+          </ul>
+        </div>
+        <p class="work__meta">全栈 · 持续迭代</p>
+      </li>
+
+      <li class="work__row reveal">
+        <p class="work__index" aria-hidden="true">02</p>
+        <div class="work__body">
+          <h3><span class="work__title">这一页</span> <span class="work__badge work__badge--live">在线</span></h3>
+          <p>
+            你正在看的个人主页。手写 HTML / CSS / JavaScript，
+            没有框架也没有构建步骤，改一行推一次就上线。
+          </p>
+          <ul class="tags" aria-label="技术栈">
+            <li>HTML</li><li>CSS</li><li>Canvas</li><li>Cloudflare Pages</li>
+          </ul>
+        </div>
+        <p class="work__meta"><a class="link" href="https://github.com/CoolBreezeBlowsGently/personal-website" target="_blank" rel="noopener">源码<span aria-hidden="true"> ↗</span></a></p>
+      </li>
+
+      <li class="work__row work__row--empty reveal">
+        <p class="work__index" aria-hidden="true">03</p>
+        <div class="work__body">
+          <h3><span class="work__title">更多项目</span></h3>
+          <p>整理中。手里还有几个小工具和实验，做完会放到这里。</p>
+        </div>
+        <p class="work__meta">待补充</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section section--split" id="about" aria-labelledby="about-h">
+    <div class="section__head reveal">
+      <h2 id="about-h">关于</h2>
+    </div>
+    <div class="about reveal">
+      <p>
+        我在医疗信息化方向做后端与管理端开发。习惯先把需求写成文档
+        再动手：表结构、状态流转、谁来用、出错时怎么退回来，
+        这些想清楚了，代码就只是把它们写下来。
+      </p>
+      <p>
+        界面部分我更在意「顺手」——按钮在哪、点完发生什么、
+        下一屏要不要重新找。好看的界面很多，能让人第二次不用想的才难。
+      </p>
+      <p class="about__aside">
+        工作之外在学怎么做更好的 Web 体验，偶尔写点小工具自用。
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="stack" aria-labelledby="stack-h">
+    <div class="section__head reveal">
+      <h2 id="stack-h">工具</h2>
+      <p class="section__note">平时真正在用的，不是会的全部。</p>
+    </div>
+    <ul class="stack reveal">
+      <li><span class="stack__label">后端</span> PHP / ThinkPHP / FastAdmin</li>
+      <li><span class="stack__label">前端</span> JavaScript / Vue / uni-app / HTML &amp; CSS</li>
+      <li><span class="stack__label">数据</span> MySQL / 索引与查询优化</li>
+      <li><span class="stack__label">工程</span> Git / Cloudflare Pages / 文档驱动开发</li>
+    </ul>
+  </section>
+
+  <section class="section section--contact" id="contact" aria-labelledby="contact-h">
+    <div class="section__head reveal">
+      <h2 id="contact-h">联系</h2>
+      <p class="section__note">有活、有问题、或者只是想聊聊，都欢迎。</p>
+    </div>
+    <p class="contact reveal">
+      <a class="contact__mail" href="mailto:2507821335@qq.com">2507821335@qq.com</a>
+    </p>
+    <ul class="contact__links reveal">
+      <li><a class="link" href="https://github.com/CoolBreezeBlowsGently" target="_blank" rel="noopener">GitHub<span aria-hidden="true"> ↗</span></a></li>
+      <li><a class="link" href="mailto:2507821335@qq.com">发邮件</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year">2026</span> Breeze · 手写 HTML/CSS/JS · 放在 Cloudflare Pages 上</p>
+</footer>
+</body>
+</html>

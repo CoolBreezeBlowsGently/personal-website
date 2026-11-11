@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Local preview / tooling
+node_modules/
+.wrangler/
+dist/
+
+# Logs
+*.log
