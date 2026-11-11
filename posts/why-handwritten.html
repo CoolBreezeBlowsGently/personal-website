@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>为什么我用手写静态站，而不是 Hexo — Breeze</title>
+<meta name="description" content="装完 Hexo、挑完主题、配完插件，两个小时过去了，我一个字没写。后来我把生成器删了。">
+<meta name="theme-color" content="#052B2C">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../styles.css">
+<script src="../script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="topbar">
+  <a class="mark" href="../index.html" aria-label="Breeze，回到首页">Breeze<span aria-hidden="true">.</span></a>
+  <nav class="nav" aria-label="主导航">
+    <a href="../index.html">主页</a>
+    <a href="../archive.html">归档</a>
+    <a href="../tags.html">标签</a>
+    <a href="../about.html">关于</a>
+    <a class="nav__ext" href="https://github.com/CoolBreezeBlowsGently" target="_blank" rel="noopener">GitHub<span aria-hidden="true"> ↗</span></a>
+  </nav>
+</header>
+
+<main id="main" class="page page--post">
+
+  <p class="crumbs mono">
+    <a href="../index.html">主页</a> <span aria-hidden="true">/</span>
+    <a href="../archive.html">归档</a> <span aria-hidden="true">/</span>
+    <span>随笔</span>
+  </p>
+
+  <article class="prose">
+    <header class="prose__head">
+      <p class="mono prose__meta">随笔 <span aria-hidden="true">·</span> 2026-11-11 <span aria-hidden="true">·</span> 约 6 分钟</p>
+      <h1>为什么我用手写静态站，而不是 Hexo</h1>
+      <p class="prose__lede">
+        我试过 Hexo。装完依赖、挑完主题、配完插件，两个小时过去了，我一个字没写。
+        后来我把生成器删了，只留三个文件，写东西的门槛反而低了。
+      </p>
+    </header>
+
+    <p>
+      先说结论：不是 Hexo 不好，是它解决的问题跟我现在的问题不一样。
+      Hexo 适合「有很多文章、很多标签、需要 RSS 和分页、几个人一起写」的场景。
+      我这里是「一个人、几篇笔记、偶尔更新」，那套东西大部分时间是空转的。
+    </p>
+
+    <h2>装主题的两小时不算写文章</h2>
+    <p>
+      搭博客最上头的一段，其实是配置期。换个主题、调个配色、塞几个插件、
+      研究文章封面图怎么裁——这些事有明确的反馈，做起来很爽，而且永远做不完。
+      真正的文章呢？还停在草稿里那句「最近有点忙」。
+    </p>
+    <p>
+      这不是自制力的问题。工具给了太多可调项，人就会去调。
+      一个能改配色的主题，等于把「继续配置」摆在「开始写」前面。
+    </p>
+
+    <h2>手写要付的账，我认</h2>
+    <p>
+      手写静态站的代价很具体：
+    </p>
+    <ul>
+      <li>发文章要复制一份页面模板，改标题、日期、摘要，再去首页和归档里加两条链接；</li>
+      <li>标签页是手写的，加一个新标签要多改一处；</li>
+      <li>没有自动分页，文章多了首页会变长。</li>
+    </ul>
+    <p>
+      换来的是：打开编辑器就是最终产物。没有构建、没有依赖、没有「上次能跑这次不能跑」。
+      改一行 CSS，刷新就是结果。<code>push</code> 上去，Cloudflare Pages 直接发布。
+    </p>
+    <p>
+      而且页面是我一行行写的，所以它长什么样我完全清楚。
+      想加一个「向下」的箭头、想让标题里的「轻」字变成橙色，不用去翻主题源码找钩子。
+    </p>
+
+    <h2>什么时候该换回去</h2>
+    <p>
+      我给这件事定了个标准：<strong>当「加文章」这件事开始让我不想写，就换工具。</strong>
+      具体说，如果文章超过二三十篇、每次都要在首页、归档、标签三处手动同步，
+      那说明我该写个构建脚本了——注意，是脚本，不是换框架。
+    </p>
+    <p>
+      到那时候大概率会选一个「读 Markdown、吐 HTML」的几十行脚本，
+      而不是重新装一遍 Hexo。因为真正需要的只是「别让我手动改三处」，
+      不需要一整套主题生态。
+    </p>
+
+    <h2>所以现在</h2>
+    <p>
+      这个站是三个文件加一张图标：<code>index.html</code>、<code>styles.css</code>、<code>script.js</code>。
+      风场是 canvas 画的，几十行；滚动显现用 IntersectionObserver，也是几十行。
+      没有框架，没有打包，没有 node_modules。
+    </p>
+    <p>
+      它不高级，但它让我今天真的写完了一篇。
+    </p>
+
+    <ul class="tags" aria-label="标签">
+      <li>HTML</li><li>CSS</li><li>Cloudflare Pages</li>
+    </ul>
+  </article>
+
+  <nav class="pager" aria-label="文章导航">
+    <a class="pager__prev" href="../archive.html">
+      <span class="mono">返回</span>
+      <strong>全部文章</strong>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="foot">
+  <p class="mono">© <span id="year">2026</span> Breeze</p>
+  <p class="mono"><a href="../feed.xml">RSS</a> <span aria-hidden="true">/</span> <a href="https://github.com/CoolBreezeBlowsGently/personal-website" target="_blank" rel="noopener">源码</a></p>
+</footer>
+</body>
+</html>

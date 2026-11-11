@@ -15,3 +15,6 @@ dist/
 
 # Logs
 *.log
+
+# Local runtime (unrelated to the site)
+.asr/

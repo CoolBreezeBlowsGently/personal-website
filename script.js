@@ -1,4 +1,4 @@
-/* Breeze — wind field, scroll reveals, current-section nav. No dependencies. */
+/* Breeze — wind field in the masthead. No dependencies. */
 (() => {
   'use strict';
 
@@ -8,52 +8,7 @@
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  /* ---------- scroll reveals --------------------------------------------- */
-  const revealables = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || reduceMotion) {
-    revealables.forEach((el) => el.classList.add('is-in'));
-  } else {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-in');
-        io.unobserve(entry.target);
-      });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
-
-    revealables.forEach((el, i) => {
-      el.style.setProperty('--i', String(Math.min(i % 4, 3)));
-      io.observe(el);
-    });
-  }
-
-  /* ---------- current section in nav ------------------------------------- */
-  const navLinks = Array.from(document.querySelectorAll('.nav a[href^="#"]'));
-  const observedSections = [
-    document.getElementById('top'),
-    ...navLinks.map((link) => document.querySelector(link.getAttribute('href'))),
-  ].filter(Boolean);
-
-  if (observedSections.length && 'IntersectionObserver' in window) {
-    const markCurrent = (id) => {
-      navLinks.forEach((link) => {
-        const on = link.getAttribute('href') === '#' + id;
-        link.classList.toggle('is-current', on);
-        if (on) link.setAttribute('aria-current', 'true');
-        else link.removeAttribute('aria-current');
-      });
-    };
-
-    const navIo = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) markCurrent(entry.target.id);
-      });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-
-    observedSections.forEach((section) => navIo.observe(section));
-  }
-
-  /* ---------- hero wind field -------------------------------------------- */
+  /* ---------- masthead wind field ---------------------------------------- */
   const canvas = document.querySelector('.hero__wind');
   const hero = document.getElementById('top');
   if (!canvas || !hero) return;

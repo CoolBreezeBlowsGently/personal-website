@@ -1,12 +1,18 @@
 # personal website
 
-Breeze 的个人主页。纯静态，零依赖、零构建：三个文件 + 一个图标，推上去就是成品。
+Breeze 的个人主页与笔记。纯静态，零依赖、零构建：手写 HTML / CSS / JS，推上去就是成品。
 
 ```
-index.html      页面结构与全部文案
-styles.css      设计变量、布局、动效
-script.js       canvas 风场、滚动显现、导航高亮
-assets/         图标等静态资源
+index.html               首页：风场 masthead + 文章列表 + 侧栏
+archive.html             归档：按年份列出全部文章
+tags.html                标签：分类与标签索引
+about.html               关于
+posts/                   文章，一篇一个 HTML
+404.html                 找不到页面
+feed.xml                 RSS（手写，2 条 item 就够）
+styles.css               设计变量、布局、动效
+script.js                canvas 风场 + 年份
+assets/                  图标等静态资源
 ```
 
 ## 本地预览
@@ -20,22 +26,29 @@ python -m http.server 8080
 
 改了文件刷新即可，不需要安装任何东西。
 
-## 改内容
+## 发一篇新文章
 
-文案全在 `index.html` 里，按注释顺序从上往下就是页面顺序。常改的几处：
+四步，都在编辑器里完成，没有构建：
+
+1. 复制 `posts/why-handwritten.html` 为新文件，改 `<title>`、`meta description`、`.prose__meta`（分类 / 日期 / 阅读时长）、`<h1>`、`.prose__lede` 和正文。
+2. 在 `index.html` 的 `<ol class="posts">` 里加一个 `<li class="post">`（复制上面那条改文案与链接）。
+3. 在 `archive.html` 的 `<ol class="archive__list">` 里加一行，改年份分组和计数。
+4. 在 `tags.html` 对应分类 / 标签下加一行，并在 `feed.xml` 加一条 `<item>`。
+
+别忘了顺手改首页与侧栏里的「目前 N 篇」和 `.catlist__n` 数字。
+
+## 改内容
 
 | 位置 | 内容 |
 | --- | --- |
 | `<title>` / `meta description` | 浏览器标签与搜索结果里显示的标题、简介 |
-| `.hero__title` | 首页大标题 |
-| `.hero__lede` | 一句话自我介绍 |
-| `.hero__facts` | 三格事实：在做什么、常用技术、托管在哪 |
-| `.work__row` | 项目列表，一行一个，复制整块 `<li>` 即可加项目 |
-| `.about` | 关于段落 |
-| `.stack li` | 技术清单 |
-| `.contact__mail` | 邮箱（同时改两处 `mailto:`） |
+| `.masthead__title` | 首页大标题 |
+| `.masthead__lede` | 一句话自我介绍 |
+| `.card--bio` | 侧栏名片：名字、简介、GitHub / 邮箱 / RSS |
+| `.about__main` | 关于页正文 |
+| `.foot` | 页脚年份与链接 |
 
-**要改的占位值**：邮箱 `2507821335@qq.com`、GitHub 用户名 `CoolBreezeBlowsGently`、项目描述里的细节。三处都在 `index.html`，搜关键词就能定位。
+**占位值**：邮箱 `2507821335@qq.com`、GitHub 用户名 `CoolBreezeBlowsGently`。全站搜关键词就能定位。
 
 配色和字号全部在 `styles.css` 顶部的 `:root` 里，改一处全站生效：
 

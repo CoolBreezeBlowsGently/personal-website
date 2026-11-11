@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Breeze</title>
+    <link>https://personal-website.pages.dev/</link>
+    <description>个人主页与笔记：全栈开发、Web 体验、手写静态站。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 11 Nov 2026 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://personal-website.pages.dev/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>为什么我用手写静态站，而不是 Hexo</title>
+      <link>https://personal-website.pages.dev/posts/why-handwritten.html</link>
+      <guid isPermaLink="true">https://personal-website.pages.dev/posts/why-handwritten.html</guid>
+      <pubDate>Wed, 11 Nov 2026 12:00:00 +0800</pubDate>
+      <category>随笔</category>
+      <description>我试过 Hexo。装完依赖、挑完主题、配完插件，两个小时过去了，我一个字没写。后来我把生成器删了，只留三个文件，写东西的门槛反而低了。</description>
+    </item>
+  </channel>
+</rss>

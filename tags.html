@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>标签 — Breeze</title>
+<meta name="description" content="按分类和标签整理的全部文章。">
+<meta name="theme-color" content="#052B2C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="topbar">
+  <a class="mark" href="index.html" aria-label="Breeze，回到首页">Breeze<span aria-hidden="true">.</span></a>
+  <nav class="nav" aria-label="主导航">
+    <a href="index.html">主页</a>
+    <a href="archive.html">归档</a>
+    <a href="tags.html" aria-current="page">标签</a>
+    <a href="about.html">关于</a>
+    <a class="nav__ext" href="https://github.com/CoolBreezeBlowsGently" target="_blank" rel="noopener">GitHub<span aria-hidden="true"> ↗</span></a>
+  </nav>
+</header>
+
+<main id="main" class="page">
+
+  <div class="page__head">
+    <p class="mono page__kicker">标签</p>
+    <h1>分类与标签</h1>
+    <p class="page__lede">分类只有几个，标签可以有很多。点进去看同一类的东西。</p>
+  </div>
+
+  <section class="tax" aria-labelledby="cat-h">
+    <h2 class="tax__title" id="cat-h">分类</h2>
+
+    <div class="tax__group" id="cat-suibi">
+      <h3 class="tax__name">随笔 <span class="mono">1</span></h3>
+      <ul class="tax__list">
+        <li><a href="posts/why-handwritten.html">为什么我用手写静态站，而不是 Hexo</a> <span class="mono tax__date">2026-11-11</span></li>
+      </ul>
+    </div>
+
+    <div class="tax__group" id="cat-biji">
+      <h3 class="tax__name">笔记 <span class="mono">0</span></h3>
+      <p class="tax__empty">还没有。学到哪儿记到哪儿，估计很快会多起来。</p>
+    </div>
+  </section>
+
+  <section class="tax" aria-labelledby="tag-h">
+    <h2 class="tax__title" id="tag-h">标签</h2>
+
+    <div class="tax__group" id="t-html">
+      <h3 class="tax__name">HTML <span class="mono">1</span></h3>
+      <ul class="tax__list">
+        <li><a href="posts/why-handwritten.html">为什么我用手写静态站，而不是 Hexo</a> <span class="mono tax__date">2026-11-11</span></li>
+      </ul>
+    </div>
+
+    <div class="tax__group" id="t-css">
+      <h3 class="tax__name">CSS <span class="mono">1</span></h3>
+      <ul class="tax__list">
+        <li><a href="posts/why-handwritten.html">为什么我用手写静态站，而不是 Hexo</a> <span class="mono tax__date">2026-11-11</span></li>
+      </ul>
+    </div>
+
+    <div class="tax__group" id="t-cloudflare">
+      <h3 class="tax__name">Cloudflare Pages <span class="mono">1</span></h3>
+      <ul class="tax__list">
+        <li><a href="posts/why-handwritten.html">为什么我用手写静态站，而不是 Hexo</a> <span class="mono tax__date">2026-11-11</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p class="mono">© <span id="year">2026</span> Breeze</p>
+  <p class="mono"><a href="feed.xml">RSS</a> <span aria-hidden="true">/</span> <a href="https://github.com/CoolBreezeBlowsGently/personal-website" target="_blank" rel="noopener">源码</a></p>
+</footer>
+</body>
+</html>
